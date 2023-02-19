@@ -1,7 +1,7 @@
 # BlackCrystal Product Feed
 
 - Contributors: [miamibc](https://github.com/miamibc)
-- Donate link: http://www.blackcrystal.net/project/woocommerce-product-xml/
+- Donate link: [paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8Y8DAJ3BVD6DU)
 - Tags: woocommerce, products, xml
 - Requires at least: 4.0
 - Requires PHP: 7.0
