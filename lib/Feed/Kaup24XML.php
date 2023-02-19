@@ -19,8 +19,6 @@ class Kaup24XML extends Base
       $prod->permalink = $product->get_permalink();
       $prod->title = $product->get_title();
       $prod->description = trim(strip_tags($product->get_short_description()));
-      // $prod->post_content = strip_tags($product->post->post_content);
-      // $prod->post_excerpt = strip_tags($product->post->post_excerpt);
       $prod->image = wp_get_attachment_image_url($product->get_image_id('full'));
 
       $incl = $prod->addChild('categories');
@@ -29,7 +27,6 @@ class Kaup24XML extends Base
         $incl->addChild('category',get_term($id)->name)
         //   ->addAttribute('id',$id)
         ;
-        // $cat->addAttribute('id', $category_id);
       }
 
       $incl = $prod->addChild('tags');
@@ -38,17 +35,11 @@ class Kaup24XML extends Base
         $incl->addChild('tag',get_tag($id)->name)
         //   ->addAttribute('id',$id)
         ;
-        // $cat->addAttribute('id', $category_id);
       }
 
       $prod->price = $product->get_price();
       $prod->regular_price = $product->get_regular_price();
       $prod->wholesale_price = $product->get_sale_price();
-      if ($discount)
-      {
-        $prod->personal_discount = "$discount%";
-        $prod->personal_price = round($product->get_sale_price() * (100 - $discount) / 100,2);
-      }
 
     }
 
